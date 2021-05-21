@@ -1,0 +1,6 @@
+<div *ngFor="let item of configArray; let i = index">
+    <div>
+        <label>{{configArray[i].nome}}</label>
+        <app-countdown [tempoObjetivo]="configArray[i].leftTime"></app-countdown>
+    </div>
+</div>

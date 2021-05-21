@@ -1,0 +1,27 @@
+<!-- <div>Time: <b [chronometer]="chronometer"></b></div>
+<button [chronometer]="chronometer" (click)="refresh(chronometer)">Refresh</button> -->
+
+
+
+<div *ngFor="let item of configArray; let i = index">
+    <div>
+        <label>{{nomeArray[i]}}</label>
+        <countdown [config]="configArray[i]"></countdown>
+    </div>
+</div>
+
+<div>
+    <input [(ngModel)]="nomeNovoCountdown">
+</div>
+
+<div>
+    <button (click)="novoCountdown()">Botão novo</button>
+</div>
+<div>
+    <button (click)="limpaArray()">Botão limpa</button>
+</div>
+
+<div>
+    {{dataAtual}}
+</div>
+

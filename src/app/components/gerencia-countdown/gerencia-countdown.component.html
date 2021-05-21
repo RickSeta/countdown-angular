@@ -1,0 +1,26 @@
+<!-- <div>Time: <b [chronometer]="chronometer"></b></div>
+<button [chronometer]="chronometer" (click)="refresh(chronometer)">Refresh</button> -->
+
+
+
+<div *ngFor="let item of configArray; let i = index">
+    <div>
+        <label>{{configArray[i].nome}}</label>
+        <app-countdown [tempoObjetivo]="configArray[i].leftTime"></app-countdown>
+        <button (click)="removeOneCountdown(i)">Tira esse</button>
+    </div>
+</div>
+
+<div>
+    <input [(ngModel)]="newCountdownName">
+</div>
+
+<div>
+    <button (click)="newCountdown()">Botão novo</button>
+</div>
+<div>
+    <button (click)="wipeArray()">Botão limpa</button>
+</div>
+<button (click)="redirect('/tela1')">Tela 1</button>
+
+
